@@ -1,9 +1,9 @@
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  effect: "fade",
   loop: true,
   slidesPerView: 1,
-  effect: "fade",
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
