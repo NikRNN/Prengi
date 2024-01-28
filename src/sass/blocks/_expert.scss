@@ -1,0 +1,94 @@
+.expert {
+  min-height: 889px;
+  padding: 79px 0 61px 0;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../img/expert/main.png") center center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #5e6369;
+    z-index: -5;
+  }
+  &-title {
+    max-width: 620px;
+    text-align: center;
+  }
+  &-links {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 36px;
+    padding: 0 33px 0 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 843px;
+    height: 64px;
+    border: 1px solid #ffffff;
+    list-style-type: none;
+  }
+  &-item {
+    font-size: 14px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+    border-right: 1px solid white;
+    padding-right: 22px;
+    &:last-child {
+      border-right: none;
+    }
+    a {
+      color: #fff;
+      transition: 0.2s all;
+      &:hover {
+        color: blue;
+        text-decoration: none;
+      }
+    }
+  }
+  &-computer {
+    margin: 0 auto;
+    width: 947px;
+    position: relative;
+  }
+  &-macbook {
+    width: 100%;
+  }
+  &-wrapper {
+    position: absolute;
+    top: 36px;
+    left: 127px;
+  }
+  .swiper {
+    &-wrapper {
+      width: 900px;
+      position: relative;
+    }
+    &-slide {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      content: "";
+    }
+  }
+
+  .swiper-custom-prev,
+  .swiper-custom-next {
+    position: relative;
+    left: -160px;
+  }
+  .swiper-custom-next {
+    left: auto;
+    right: 30px;
+  }
+}
