@@ -25,9 +25,7 @@ const swiper1 = new Swiper(".extra", {
   slidesPerView: 1,
   observer: true,
   observeParents: true,
-  pagination: {
-    el: ".swiper-pagination",
-  },
+
   navigation: {
     nextEl: ".swiper-custom-next",
     prevEl: ".swiper-custom-prev",
@@ -50,7 +48,6 @@ function showTab(tabId) {
   document.querySelectorAll(".expert-tab").forEach(function (tab) {
     if (tab.id === tabId) {
       tab.style.display = "block";
-      tab.querySelector(".extra").swiper1.update();
     } else {
       tab.style.display = "none";
     }
