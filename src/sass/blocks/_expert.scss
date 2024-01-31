@@ -50,6 +50,9 @@
         color: blue;
         text-decoration: none;
       }
+      .is-active {
+        color: blue;
+      }
     }
   }
   &-computer {
@@ -65,7 +68,9 @@
     top: 36px;
     left: 127px;
   }
+
   .swiper {
+    margin: 0 auto;
     &-wrapper {
       width: 900px;
       position: relative;

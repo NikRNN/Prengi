@@ -1,3 +1,4 @@
+//слайдер в секции promo
 const swiper = new Swiper(".swiper1", {
   // Optional parameters
   direction: "horizontal",
@@ -16,16 +17,50 @@ const swiper = new Swiper(".swiper1", {
   },
 });
 
-const swiper1 = new Swiper(".swiper2", {
-  // Optional parameters
+// переключение слайдов в слайдере expert
+const swiper1 = new Swiper(".extra", {
   direction: "horizontal",
   effect: "fade",
   loop: true,
   slidesPerView: 1,
-
-  // Navigation arrows
+  observer: true,
+  observeParents: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
   navigation: {
     nextEl: ".swiper-custom-next",
     prevEl: ".swiper-custom-prev",
   },
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  showTab("tab-1");
+
+  document.querySelectorAll(".tab-link").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      let tabId = this.getAttribute("href").substr(1);
+      showTab(tabId);
+    });
+  });
+});
+
+function showTab(tabId) {
+  document.querySelectorAll(".expert-tab").forEach(function (tab) {
+    if (tab.id === tabId) {
+      tab.style.display = "block";
+      tab.querySelector(".extra").swiper1.update();
+    } else {
+      tab.style.display = "none";
+    }
+  });
+
+  document.querySelectorAll(".tab-link").forEach(function (link) {
+    link.classList.remove("is-active");
+  });
+
+  document
+    .querySelector(`.tab-link[href="#${tabId}"]`)
+    .classList.add("is-active");
+}
