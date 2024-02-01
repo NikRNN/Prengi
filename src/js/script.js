@@ -18,7 +18,7 @@ const swiper = new Swiper(".swiper1", {
 });
 
 // переключение слайдов в слайдере expert
-const swiper1 = new Swiper(".extra", {
+const swiper1 = new Swiper(".swiper2", {
   direction: "horizontal",
   effect: "fade",
   loop: true,
@@ -27,8 +27,78 @@ const swiper1 = new Swiper(".extra", {
   observeParents: true,
 
   navigation: {
-    nextEl: ".swiper-custom-next",
-    prevEl: ".swiper-custom-prev",
+    nextEl: ".swiper2-custom-next",
+    prevEl: ".swiper2-custom-prev",
+  },
+});
+
+const swiper2 = new Swiper(".swiper3", {
+  direction: "horizontal",
+  effect: "fade",
+  loop: true,
+  slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
+  navigation: {
+    nextEl: ".swiper3-custom-next",
+    prevEl: ".swiper3-custom-prev",
+  },
+});
+
+const swiper3 = new Swiper(".swiper4", {
+  direction: "horizontal",
+  effect: "fade",
+  loop: true,
+  slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
+  navigation: {
+    nextEl: ".swiper4-custom-next",
+    prevEl: ".swiper4-custom-prev",
+  },
+});
+
+const swiper4 = new Swiper(".swiper5", {
+  direction: "horizontal",
+  effect: "fade",
+  loop: true,
+  slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
+  navigation: {
+    nextEl: ".swiper5-custom-next",
+    prevEl: ".swiper5-custom-prev",
+  },
+});
+
+const swiper5 = new Swiper(".swiper6", {
+  direction: "horizontal",
+  effect: "fade",
+  loop: true,
+  slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
+  navigation: {
+    nextEl: ".swiper6-custom-next",
+    prevEl: ".swiper6-custom-prev",
+  },
+});
+
+const swiper6 = new Swiper(".swiper7", {
+  direction: "horizontal",
+  effect: "fade",
+  loop: true,
+  slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
+  navigation: {
+    nextEl: ".swiper7-custom-next",
+    prevEl: ".swiper7-custom-prev",
   },
 });
 
