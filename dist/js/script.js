@@ -134,13 +134,15 @@ function showTab(tabId) {
 
 //работа с кнопками (вызов формы)
 document.addEventListener("DOMContentLoaded", function () {
-  const openForm = document.querySelector(".openForm");
+  const openForm = document.querySelectorAll(".openForm");
   const closeForm = document.querySelector(".main-form-close");
-  const form = document.getElementById("layer");
+  const form = document.querySelector(".layer");
   // const thanks = document.getElementById("#thanks");
 
-  openForm.addEventListener("click", function () {
-    form.style.display = "block";
+  openForm.forEach(function (open) {
+    open.addEventListener("click", function () {
+      form.style.display = "block";
+    });
   });
 
   closeForm.addEventListener("click", function () {
