@@ -136,16 +136,52 @@ function showTab(tabId) {
 document.addEventListener("DOMContentLoaded", function () {
   const openForm = document.querySelectorAll(".openForm");
   const closeForm = document.querySelector(".main-form-close");
-  const form = document.querySelector(".layer");
+  const layer = document.querySelector(".layer");
+  const form = document.querySelector("#form");
+  const closeThanks = document.querySelector(".modal__close");
   // const thanks = document.getElementById("#thanks");
 
   openForm.forEach(function (open) {
     open.addEventListener("click", function () {
+      layer.style.display = "block";
       form.style.display = "block";
     });
   });
 
   closeForm.addEventListener("click", function () {
     form.style.display = "none";
+    layer.style.display = "none";
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    fetch("mailer/smart.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+
+      .then(function () {
+        const thanks = document.getElementById("thanks");
+        thanks.style.display = "flex";
+        form.style.display = "none";
+        form.reset();
+      });
+  });
+
+  closeThanks.addEventListener("click", function () {
+    thanks.style.display = "none";
+    layer.style.display = "none";
   });
 });
