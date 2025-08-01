@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const formData = new FormData(form);
+<<<<<<< HEAD
     const data = Object.fromEntries(formData.entries());
 
     fetch("http://localhost:3000/forms", {
@@ -179,13 +180,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
       .then(function () {
         console.log();
+=======
+
+    fetch("mailer/smart.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+
+      .then(function () {
+>>>>>>> 15d7f617ff5871bd367cb745567db1279f9b8966
         const thanks = document.getElementById("thanks");
         thanks.style.display = "flex";
         form.style.display = "none";
         form.reset();
+<<<<<<< HEAD
       })
       .catch((err) => {
         console.error("Ошибка:", err);
+=======
+>>>>>>> 15d7f617ff5871bd367cb745567db1279f9b8966
       });
   });
 
