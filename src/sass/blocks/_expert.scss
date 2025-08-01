@@ -1,0 +1,120 @@
+.expert {
+  min-height: 889px;
+  padding: 79px 0 61px 0;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../img/expert/main.png") center center/cover no-repeat;
+    background-blend-mode: multiply;
+    background-color: #5e6369;
+    z-index: -5;
+  }
+  &-title {
+    max-width: 620px;
+    text-align: center;
+  }
+  &-links {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 36px;
+    padding: 0 33px 0 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 843px;
+    height: 64px;
+    border: 1px solid #ffffff;
+    list-style-type: none;
+  }
+  &-item {
+    font-size: 14px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #ffffff;
+    position: relative;
+    border-right: 1px solid white;
+    padding-right: 22px;
+    &:last-child {
+      border-right: none;
+    }
+    a {
+      color: #fff;
+      transition: 0.2s all;
+      &:hover {
+        color: blue;
+        text-decoration: none;
+      }
+      .is-active {
+        color: blue;
+      }
+    }
+  }
+  &-computer {
+    margin: 0 auto;
+    width: 947px;
+    position: relative;
+  }
+  &-macbook {
+    width: 100%;
+  }
+  &-wrapper {
+    position: absolute;
+    top: 36px;
+    left: 127px;
+  }
+
+  .swiper2,
+  .swiper3,
+  .swiper4,
+  .swiper5,
+  .swiper6,
+  .swiper7 {
+    margin: 0 auto;
+  }
+  .swiper-wrapper {
+    width: 900px;
+    position: relative;
+  }
+  .swiper-slide {
+    width: 100%;
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      content: "";
+    }
+  }
+
+  .swiper2-custom-prev,
+  .swiper2-custom-next,
+  .swiper3-custom-prev,
+  .swiper3-custom-next,
+  .swiper4-custom-prev,
+  .swiper4-custom-next,
+  .swiper5-custom-prev,
+  .swiper5-custom-next,
+  .swiper6-custom-prev,
+  .swiper6-custom-next,
+  .swiper7-custom-prev,
+  .swiper7-custom-next {
+    position: relative;
+    left: -160px;
+  }
+  .swiper2-custom-next,
+  .swiper3-custom-next,
+  .swiper4-custom-next,
+  .swiper5-custom-next,
+  .swiper6-custom-next,
+  .swiper7-custom-next {
+    left: auto;
+    right: 30px;
+  }
+}

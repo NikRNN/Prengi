@@ -1,0 +1,117 @@
+.layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+  z-index: 1000;
+}
+
+.main-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  min-height: 297px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  &-header {
+    width: 100%;
+    min-height: 68px;
+    padding: 20px 0 19px 0;
+    background-color: #0082a1;
+  }
+  &-title {
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+  }
+  &-body {
+    min-height: 229px;
+    padding: 17px 41px 25px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-close {
+    position: absolute;
+    font-size: 45px;
+    line-height: 20px;
+    color: #fff;
+    top: 0;
+    right: -40px;
+    cursor: pointer;
+  }
+  input {
+    width: 270px;
+    height: 47px;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 4px;
+    padding-left: 28px;
+    background-color: #fff;
+    z-index: 99;
+    margin-bottom: 15px;
+  }
+
+  &-btn {
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+#thanks {
+  display: none;
+}
+
+.modal {
+  &__thanks {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    min-height: 250px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  &__descr {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0d0d0d;
+    text-align: center;
+  }
+  &__close {
+    position: absolute;
+    font-size: 45px;
+    line-height: 20px;
+    color: red;
+    top: 0;
+    right: -40px;
+    cursor: pointer;
+  }
+}

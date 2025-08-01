@@ -1,0 +1,124 @@
+.options {
+  min-height: 450px;
+  position: relative;
+  &-title {
+    position: absolute;
+    width: 373px;
+    text-align: center;
+    top: 79px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  &-wrapper {
+    max-width: 100%;
+    height: 580px;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &-title {
+      font-size: 30px;
+      line-height: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      position: relative;
+      z-index: 6;
+      margin-bottom: 20px;
+    }
+  }
+  &-img {
+    width: 100%;
+    height: 580px;
+  }
+  &-wrapper1 {
+    width: 50%;
+    position: relative;
+    background: url("../img/options/cloud.png") center center/cover no-repeat;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgb(0 0 0 / 0.6);
+    }
+    &-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      right: 83px;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: self-end;
+    }
+    &-subtitle1 {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 300;
+      color: #ffffff;
+      z-index: 6;
+      text-align: end;
+    }
+    &-block {
+      position: absolute;
+      width: 167px;
+      height: 167px;
+      opacity: 0.3;
+      background-color: #00c2f0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+      right: 43px;
+    }
+  }
+  &-wrapper2 {
+    width: 50%;
+    position: relative;
+    background: url("../img/options/server.png") center center/cover no-repeat;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgb(0 0 0 / 0.6);
+    }
+    &-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      left: 83px;
+      max-width: 480px;
+    }
+    &-subtitle2 {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 300;
+      color: #ffffff;
+      z-index: 6;
+      text-align: start;
+    }
+    &-block {
+      position: absolute;
+      width: 167px;
+      height: 167px;
+      opacity: 0.3;
+      background-color: #00c2f0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9;
+      left: 43px;
+    }
+  }
+}
